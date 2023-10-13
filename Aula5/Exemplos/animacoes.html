@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Animações </title>
+	<style>
+		.div1 {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			animation: exemplo 4s;
+			position: relative;
+		}
+
+		@keyframes exemplo {
+			0% {background-color: red; left: 0px; top: 0px;}
+			25% {background-color: yellow; left: 200px; top: 0px;}
+			50% {background-color: blue; left: 200px; top: 200px;}
+			75% {background-color: green; left: 0px; top: 200px;}
+			100% {background-color: red;left: 0px; top: 0px;}
+		}
+
+		.div2 {
+			width: 100px;
+			height: 100px;
+			background-color: darkred;
+			animation: exemplo2 2s;
+		}
+
+		@keyframes exemplo2 {
+			from {
+				background-color: darkred;
+				transform: transtaleX(0) rotate(0deg);
+			}
+
+			to {
+				background-color: green;
+				transform: translateX(200px) rotate(45deg);
+			}
+		}
+
+		.div3 {
+			width: 100px;
+			height: 100px;
+			background-color: orangered;
+			animation: exemplo3 2s alternate;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes exemplo3 {
+			0% {
+				background-color: orangered;
+				transform: translateX(0px) rotate(0deg);
+			}
+
+			50% {
+				background-color: red;
+				transform: translateX(100px)rotate(45deg);
+			}
+
+			100% {
+				background-color: orange;
+				transform: translateX(200px) rotate(90deg);
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<h1> Animações CSS </h1>
+	<p> Nota: a animação ocorre apenas uma vez e volta ao estado original.</p>
+	<div class="div1"></div>
+	<div class="div2"></div>
+	<div class="div3"></div>
+
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transição</title>
+	<style>
+		.div1 {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			transition: background-color 5s ease;
+		}
+
+		.div1:hover {
+			background-color: skyblue;
+		}
+
+		.div2 {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			transition: opacity 5s ease-out;
+		}
+
+		.div2:hover {
+			opacity: 0;
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<h1>Exemplo de transição</h1>
+	<p>Coloque o cursos em cima do elemento para ver a transição.</p>
+
+	<div class="div1"></div>
+	<p>-------------------</p>
+	<div class="div2"></div>
+
+</body>
+</html>
+
