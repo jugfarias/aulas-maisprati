@@ -15,9 +15,34 @@
 			z-index: 1;
 		}
 
+		/* seta para a esquerda */
+		.tooltip-text::before {
+			content: ""; 					/* conteúdo vazio */
+			position: absolute; 			/* posição em relação ao tooltip-text */
+			top:50%; 						/* deixa a seta na metade do tooltip */
+			right: 100%;					/* posiciona a seta à esquerda do tooltip */
+			margin-top: -5px;				/* faz a seta subir um pouco */
+			border-width: 5px;
+			border-style: solid;
+			border-color: transparent #333 transparent transparent;	
+		}
+
+		/* seta para a direita */
+		.tooltip-text::after {
+			content: "";
+			position: absolute;
+			top:50%;
+			left: 100%;
+			margin-top: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: transparent transparent transparent #333;
+		}
+
 		.tooltip:hover .tooltip-text {
 			visibility: visible;
 		}
+
 	</style>
 </head>
 <body>
