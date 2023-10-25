@@ -1,0 +1,11 @@
+Variáveis incorretas:
+
+- número2: não pode conter acento
+- %dividir: não pode conter % 
+- 1numero: não pode começar com número
+- 6_05 _1312: não pode conter espaço nem começar com número
+- 1º_lugar: não pode iniciar com número
+- tempo e hora: não pode conter espaço
+- raio.circulo: não pode conter pontuação
+- d'agua: não pode '
+- 2dias: não pode iniciar com número
