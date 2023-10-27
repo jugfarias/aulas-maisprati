@@ -9,3 +9,4 @@ Variáveis incorretas:
 - raio.circulo: não pode conter pontuação
 - d'agua: não pode '
 - 2dias: não pode iniciar com número
+- teste 1: não pode ter espaço
