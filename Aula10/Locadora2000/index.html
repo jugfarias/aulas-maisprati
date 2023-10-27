@@ -9,6 +9,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
+	<script src="script.js"></script>
 </head>
 <body>
 
@@ -187,7 +188,9 @@
 					<td>7,2</td>
 				</tr>
 
-
+				<tr id="inserirTabela">
+					
+				</tr>
 			</tbody>
 
 		</table>
@@ -202,7 +205,7 @@
 	<div class="container mb-5">
 		<h2 class="text-center">Cadastrar Novo Filme</h2>
 
-		<form>
+		<form name="cadastrar" onsubmit="event.preventDefault()">
 			
 			<!-- linha código e data -->
 			<div class="row">
@@ -210,13 +213,13 @@
 				<!-- coluna código -->
 				<div class="mb-3 col">
 					<label for="codFilme" class="form-label">Código</label>
-					<input type="text" class="form-control" id="codFilme">
+					<input type="text" class="form-control" id="codFilme" name="codigo" required>
 				</div>
 
 				<!-- coluna data -->
 				<div class="mb-3 col">
 					<label for="anoFilme" class="form-label">Lançamento</label>
-					<input type="text" class="form-control" id="anoFilme" placeholder="DD/MM/AAAA">
+					<input type="date" class="form-control" id="anoFilme" name="data" required>
 				</div>
 
 			</div>
@@ -227,13 +230,13 @@
 				<!-- coluna título -->
 				<div class="mb-3 col">
 					<label for="tituloFilme" class="form-label">Título</label>
-					<input type="text" id="tituloFilme" class="form-control">
+					<input type="text" id="tituloFilme" class="form-control" name="titulo" required>
 				</div>
 
 				<!-- coluna diretor -->
 				<div class="mb-3 col">
 					<label for="diretorFilme" class="form-label">Diretor</label>
-					<input type="text" id="diretorFilme" class="form-control">
+					<input type="text" id="diretorFilme" class="form-control" name="diretor" required>
 				</div>
 
 			</div>
@@ -243,7 +246,7 @@
 				
 				
 					<div class="mb-3 col form-check">
-						<input type="radio" id="radiogeneroAcao" name="radio" class="form-check-input" value="acao">
+						<input type="radio" id="radiogeneroAcao" name="radio" class="form-check-input" value="acao" required>
 						<label for="radiogeneroAcao" class="form-label">Ação</label><br>
 						<input type="radio" id="radiogeneroAnim" name="radio" class="form-check-input" value="anim">
 						<label for="radiogeneroAnim" class="form-label">Animação</label><br>
@@ -270,25 +273,27 @@
 				<!-- coluna atriz/ator -->
 				<div class="mb-3 col">
 					<label for="atrizFilme" class="form-label">Atriz/Ator Principal</label>
-					<input type="text" id="atrizFilme" class="form-control">
+					<input type="text" id="atrizFilme" class="form-control" name="ator" required>
 				</div>
 
 				<!-- coluna diretor -->
 				<div class="mb-3 col">
 					<label for="imdbFilme" class="form-label">Nota IMDb</label>
-					<input type="text" id="imdbFilme" class="form-control">
+					<input type="text" id="imdbFilme" class="form-control" name="nota" required>
 				</div>
 
 			</div>
 
 			<!-- botão enviar -->
 			<div class="col-auto">
-				<button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+				<button type="submit" class="btn btn-primary mb-3" onclick="insere()">Cadastrar</button>
 			</div>
 
 		</form>
 
 	</div>
+
+	
 
 </body>
 </html>
