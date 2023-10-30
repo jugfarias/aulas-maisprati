@@ -15,8 +15,6 @@ function insere(){
 	inserir.innerHTML += `<td>${gen}</td>`;
 	inserir.innerHTML += `<td>${ator}</td>`;
 	inserir.innerHTML += `<td>${nota}</td>`;
-
-	console.log("insere")
 }
 
 
