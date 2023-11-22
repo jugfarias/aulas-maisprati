@@ -17,6 +17,13 @@
 	background-image: url(img/space.jpeg);
 }
 
+.bgimage {
+	height: 100vh;
+	position: relative;
+	background: url("img/space.jpeg");
+	background-size: cover;
+}
+
 /* seção serviços */
 .servicesText .card {
 	height: 280px;
